@@ -15,10 +15,10 @@ function App() {
         <Navbar prodId={prodId} />
         <div className="home">
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/webshop">
               <Home setProdId={setProdId} />
             </Route>
-            <Route exact path="/create">
+            <Route exact path="/webshop/create">
               <Create />
             </Route>
           </Switch>

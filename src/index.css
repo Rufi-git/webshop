@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #151320;
+  font-weight: 500;
+  color: #edf0f1;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+li,
+a {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo h1 a {
+  font-size: 1em;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav_links li a{
+  transition: all 0.3s;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px;
+  margin: 0px 20px;
+  font-size: 20px;
+}
+
+.nav_links li:nth-child(1) a:hover {
+  transition: all 0.3s;
+  background-color: rgba(0, 135, 169, 1);
+}
+.nav_links li:nth-child(2) button{
+  position: relative;
+  transition: all 0.3s;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  background-color: rgba(0, 135, 169, 1);
+  cursor: pointer;
+}
+
+.nav_links li:nth-child(2) button:hover {
+  transition: all 0.3s;
+  background-color: transparent;
+  border: none;
+}
+
+.nav_links li:hover {
+  color: #0088a9;
+}
+
+.home {
+  padding: 20px 100px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: all 0.5s;
+}
+
+.container .option_item {
+  display: block;
+  position: relative;
+  margin: 10px;
+
+}
+
+.option_item .option_inner {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 85px 40px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.option_item .checkbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.option_item .checkbox ~ .option_inner {
+  transition: all 0.5s;
+}
+.option_item .checkbox:checked ~ .option_inner {
+  border: 5px solid;
+  border-color: white;
+  scale: 1.1;
+  transition: all 0.5s;
+}
+
+.option_item .option_inner .tickmark {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 40px solid;
+  border-color: #fff transparent transparent #fff;
+  display: none;
+}
+
+.option_item .option_inner .tickmark:before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -20px;
+  width: 15px;
+  height: 5px;
+  border: 3px solid;
+  border-color: transparent transparent green green;
+  transform: rotate(-45deg);
+}
+
+.option_item .checkbox:checked ~ .option_inner .tickmark {
+  display: block;
+}
+
+.create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create .fields {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.create .fields .input-field {
+  position: relative;
+  width: 550px;
+}
+
+.create .fields .input-field input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  outline: none;
+  background-color: #151320;
+  color: #fff;
+  font-size: 1em;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.create .fields .input-field label {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.create .fields .input-field input:valid ~ label,
+.create .fields .input-field input:focus ~ label {
+  color: #1d2b3a;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.7em;
+  padding: 0px 15px;
+  background-color: #00dfc4;
+}
+
+.create .fields .input-field input:valid,
+.create .fields .input-field input:focus {
+  border: 1px solid #00dfc4;
+}
+
+.create .fields .input-field .dropdown {
+  min-width: 36em;
+  position: relative;
+}
+
+.create .fields .input-field .dropdown * {
+  box-sizing: border-box;
+}
+
+.create .fields .input-field .type_select {
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  background-color: #151320;
+  color: #edf0f1;
+  transition: all 0.5s;
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  outline: none;
+  appearance: none;
+}
+
+.create .fields .input-field .type_select:hover {
+  border: 1px solid #00dfc4;
+}
+
+.create .fields .input_type {
+  width: 570px;
+  transition: all 0.5s;
+}
+
+.create .fields .input-field .type_select option {
+  color: #edf0f1;
+  font-size: 1.2em;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+.create .fields .input-field .type_select option::selection {
+  background-color: red;
+}
+
+.btn_submit {
+  margin-top: 100px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  background-color: #0088a9;
+  color: #fff;
+  cursor: pointer;
+}
+
